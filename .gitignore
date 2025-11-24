@@ -25,4 +25,6 @@ gradle-app.setting
 *.swp
 *.bak
 djl/
-
+.java/
+.cache/
+.djl.ai/

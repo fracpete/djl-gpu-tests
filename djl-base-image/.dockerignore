@@ -1,4 +1,7 @@
 djl/
 *~
 *.swp
+.java
+.cache
+.gradle
 

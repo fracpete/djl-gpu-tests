@@ -23,7 +23,7 @@
 * launch container
 
   ```bash
-  docker run --gpus=all --shm-size 8G --net=host \
+  docker run --rm --gpus=all --shm-size 8G --net=host \
     -u $(id -u):$(id -g) -e USER=$USER \
     -v `pwd`:/workspace \
     -v `pwd`/.gradle:/.gradle \

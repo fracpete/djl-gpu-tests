@@ -21,7 +21,7 @@ FROM nvidia/cuda:$version AS base
 # ARG djl_converter_wheel="https://publish.djl.ai/djl_converter/djl_converter-${djl_version//-*/}-py3-none-any.whl"
 
 RUN    apt-get -y update \
-    && DEBIAN_FRONTEND=noninteractive apt-get -y install gradle openjdk-17-jdk-headless wget bash \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y install gradle openjdk-17-jdk-headless wget bash python3 \
     && rm -rf /var/lib/apt/lists/*
 
 # ENV NO_OMP_NUM_THREADS=true
@@ -36,9 +36,14 @@ ENV LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib/python${python_version}/dis
 #ENV PYTORCH_FLAVOR=cu124-precxx11
 
 ENV PYTORCH_KERNEL_CACHE_PATH=/.cache
+ENV PYTORCH_FLAVOR=cu124-precxx11
+ENV PYTORCH_PRECXX11=true
+ENV PYTORCH_VERSION=2.5.1
+ENV PYTORCH_LIBRARY_PATH=/usr/local/lib/python3.12/dist-packages/torch/lib
+
 
 # TODO: remove TORCH_CUDNN_V8_API_DISABLED once PyTorch bug is fixed
-ENV TORCH_CUDNN_V8_API_DISABLED=1
+#ENV TORCH_CUDNN_V8_API_DISABLED=1
 
 ENV HF_HOME=/.cache/huggingface
 ENV HF_HUB_ENABLE_HF_TRANSFER=1
@@ -49,5 +54,6 @@ WORKDIR /workspace
 ENV GRADLE_USER_HOME=/.gradle
 ENV XDG_CACHE_HOME=/.cache
 ENV _JAVA_OPTIONS=-Duser.home=/
+
 
 CMD ["bash"]

@@ -1,4 +1,4 @@
-# CUDA base image
+# CUDA base image (NOT WORKING)
 
 * clone DJL
 
@@ -18,7 +18,7 @@
 * build image
 
   ```bash
-  docker build -t djl-gpu-tests .
+  docker build -t djl-gpu-tests-cuda .
   ```
 
 * launch container
@@ -31,7 +31,7 @@
     -v `pwd`/.cache:/.cache \
     -v `pwd`/.java:/.java \
     -v `pwd`/.djl.ai:/tmp/.djl.ai \
-    -it djl-gpu-tests
+    -it djl-gpu-tests-cuda
   ```
 
 * compile DJL

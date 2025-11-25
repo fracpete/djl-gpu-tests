@@ -1,0 +1,11 @@
+djl/
+*~
+*.swp
+.java
+.cache
+.gradle
+*.zip
+weka*/
+data/
+groovy/
+

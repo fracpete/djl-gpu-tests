@@ -12,7 +12,6 @@ RUN    apt-get -y update \
 COPY bash.bashrc /etc/bash.bashrc
 WORKDIR /workspace
 
-#ENV HOME=/
 ENV GRADLE_USER_HOME=/.gradle
 ENV XDG_CACHE_HOME=/.cache
 ENV _JAVA_OPTIONS=-Duser.home=/

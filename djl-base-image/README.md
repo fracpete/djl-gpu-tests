@@ -12,6 +12,7 @@
   mkdir -p ./.gradle
   mkdir -p ./.cache
   mkdir -p ./.java
+  mkdir -p ./.djl.ai
   ```
 
 * build image
@@ -29,6 +30,7 @@
     -v `pwd`/.gradle:/.gradle \
     -v `pwd`/.cache:/.cache \
     -v `pwd`/.java:/.java \
+    -v `pwd`/.djl.ai:/tmp/.djl.ai \
     -it djl-gpu-tests
   ```
 

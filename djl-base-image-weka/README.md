@@ -13,6 +13,7 @@
   mkdir -p ./.gradle
   mkdir -p ./.cache
   mkdir -p ./.java
+  mkdir -p ./.djl.ai
   mkdir -p ./wekafiles
   mkdir -p ./data
   mkdir -p ./groovy
@@ -46,6 +47,7 @@
     -v `pwd`/.gradle:/.gradle \
     -v `pwd`/.cache:/.cache \
     -v `pwd`/.java:/.java \
+    -v `pwd`/.djl.ai:/tmp/.djl.ai \
     -v `pwd`/wekafiles:/wekafiles \
     -it djl-gpu-tests-weka
   ```

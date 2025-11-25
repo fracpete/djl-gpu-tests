@@ -101,7 +101,7 @@
   ```
 
 
-* build DJL classifier (Groovy)
+* build DJL classifier (Groovy) - NOT WORKING, fails to find Groovy classes??
 
   ```bash
   rm djl*.params

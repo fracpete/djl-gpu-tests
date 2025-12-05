@@ -69,7 +69,7 @@
   java -cp /workspace/weka-3-9-6/weka.jar \
     weka.core.WekaPackageManager \
     -install-package \
-    https://github.com/fracpete/djl-weka-package/releases/download/v2025.10.24/djl-2025.10.24.zip
+    https://github.com/fracpete/djl-weka-package/releases/download/v2025.12.5/djl-2025.12.5.zip
   ```
 
 * install djl-weka-package (local zip file)
@@ -82,7 +82,7 @@
   java -cp /workspace/weka-3-9-6/weka.jar \
     weka.core.WekaPackageManager \
     -install-package \
-    /workspace/djl-2025.10.24.zip
+    /workspace/djl-2025.12.5.zip
   ```
 
 * build DJL classifier
